@@ -1,6 +1,8 @@
 package mx.edu.uacm.registro.test.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -36,10 +38,11 @@ public class PersonaTest {
 		
 
 		Persona persona = new Persona();
-		persona.setNombre("Francisco");
+		persona.setNombre("Ale");
 		persona.setRfc("MEZS");
 		persona.setTotal(new Double("1000.0"));
 		personaRepository.save(persona);
+		
 		
 		Factura factura1 = new Factura(new Date(), new Double("300.00"));
 		Factura factura2 = new Factura(new Date(), new Double("600.00"));
@@ -55,8 +58,6 @@ public class PersonaTest {
 		Assert.assertNotNull(personaAEncontrar);
 		
 		
-		
-		/*
 		List<Factura> facturas =  new ArrayList<Factura>();
 		
 		facturas.add(factura1);
@@ -64,7 +65,7 @@ public class PersonaTest {
 		
 		persona.setFacturas(facturas);
 		
-		personaRepository.save(persona);*/
+		personaRepository.save(persona);
 		
 		
 		
